@@ -1,0 +1,74 @@
+#include "Player.h"
+void Player::printPlayerStatus() {
+    cout << "------------------------------------" << endl;
+    cout << "* 현재 능력치" << endl;
+    cout << "닉네임: " << nickname << endl;
+    cout << "Lv. " << level << endl;
+    cout << "HP: " << HP << endl;
+    cout << "MP: " << MP << endl;
+    cout << "공격력: " << power << endl;
+    cout << "방어력: " << defence << endl;
+    cout << "정확도: " << accuracy << endl;
+    cout << "속도: " << speed << endl;
+    cout << "------------------------------------" << endl;
+}
+
+
+#include "Archer.h"
+#include <iostream>
+using namespace std;
+
+Archer::Archer(string nickname) : Player(string nickname){
+job_name = "궁수";
+cout << "* 궁수로 전직하였습니다." << endl;
+HP = 80;
+}
+
+void Archer::attack() {
+    cout << "* 화살을 쏜다" << endl;
+}
+
+
+#include "Thief.h"
+#include <iostream>
+using namespace std;
+
+Thief::Thief(string nickname) : Player(string nickname){
+job_name = "도적";
+cout << "* 도적으로 전직하였습니다." << endl;
+HP = 80;
+}
+
+void Thief::attack() {
+    cout << "* 표창을 날린다" << endl;
+}
+
+
+#include "Magician.h"
+#include <iostream>
+using namespace std;
+
+Magician::Magician(string nickname) : Player(string nickname){
+job_name = "마법사";
+cout << "* 마법사로 전직하였습니다." << endl;
+HP = 80;
+}
+
+void Magicianr::attack() {
+    cout << "* 마법을 시전한다" << endl;
+}
+
+
+#include "Warrior.h"
+#include <iostream>
+using namespace std;
+
+Warrior::Warrior(string nickname) : Player(string nickname){
+    job_name = "전사";
+    cout << "* 전사로 전직하였습니다." << endl;
+    HP = 80;
+}
+
+void Warrior::attack() {
+    cout << "* 검을 휘두른다" << endl;
+}
